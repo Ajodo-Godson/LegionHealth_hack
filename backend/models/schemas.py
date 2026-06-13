@@ -20,10 +20,29 @@ class PatientRecords(BaseModel):
     prior_treatments: Optional[list[str]] = None
 
 
+class PatientLocation(BaseModel):
+    city: str
+    state: str = "GA"
+    zip_code: Optional[str] = None
+
+
 class RunRequest(BaseModel):
     diagnosis: str
     charter: Charter
     records: Optional[PatientRecords] = None
+    run_mode: Literal["demo", "custom"] = "demo"
+    location: Optional[PatientLocation] = None
+
+
+class RunScenario(BaseModel):
+    """In-memory scenario for a single run — demo files or generated."""
+
+    run_mode: Literal["demo", "custom"]
+    treatment_evidence: dict
+    insurance_plans: dict
+    mock_world: dict
+    location: Optional[PatientLocation] = None
+    condition_label: str = ""
 
 
 class RunResponse(BaseModel):
@@ -76,7 +95,12 @@ class Plan(BaseModel):
 
 class VoiceConsentBody(BaseModel):
     granted: bool
+    use_real_call: bool = False
+    # Back-compat alias from earlier Twilio-only build
     use_twilio: bool = False
+
+    def wants_real_call(self) -> bool:
+        return self.use_real_call or self.use_twilio
 
 
 class HealthResponse(BaseModel):
@@ -85,3 +109,7 @@ class HealthResponse(BaseModel):
     mode: str = "stub"
     backend_dir: str = ""
     twilio_enabled: bool = False
+    agentphone_enabled: bool = False
+    real_phone_enabled: bool = False
+    phone_provider: str = "none"
+    agentphone_to_number: Optional[str] = None
