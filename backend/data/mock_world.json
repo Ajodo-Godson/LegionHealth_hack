@@ -1,0 +1,41 @@
+{
+  "insurer": {
+    "plan_name": "BlueCross Silver PPO",
+    "covers_sleep_apnea_treatment_at": ["clinic_a", "clinic_b"],
+    "member_id": "SYN-88421"
+  },
+  "clinics": {
+    "clinic_a": {
+      "id": "clinic_a",
+      "name": "Northside Sleep Center",
+      "address": "1200 Medical Park Dr, Suite 300, Atlanta, GA 30308",
+      "phone": "(404) 555-0182",
+      "accepts_plan": true,
+      "wait_days": 14,
+      "cpap_setup_available": true
+    },
+    "clinic_b": {
+      "id": "clinic_b",
+      "name": "Metro Pulmonary & Sleep",
+      "address": "450 Peachtree St NE, Atlanta, GA 30308",
+      "phone": "(404) 555-0291",
+      "accepts_plan": false,
+      "reason": "Dropped this plan March 2026",
+      "wait_days": 5,
+      "cpap_setup_available": true
+    },
+    "clinic_c": {
+      "id": "clinic_c",
+      "name": "Lakeside Sleep Medicine",
+      "address": "88 Lakeview Blvd, Decatur, GA 30030",
+      "phone": "(404) 555-0377",
+      "accepts_plan": true,
+      "wait_days": 6,
+      "cpap_setup_available": true
+    }
+  },
+  "coverage": {
+    "cpap_est_cost": "$150-400 (estimated after insurance)",
+    "prior_auth_days": "3-5 business days"
+  }
+}
