@@ -41,6 +41,20 @@ def records_provided(records: Optional[PatientRecords]) -> bool:
     return False
 
 
+DEMO_DIAGNOSIS_KEYWORDS = (
+    "sleep apnea",
+    "obstructive sleep apnea",
+    "osa",
+    "cpap",
+    "ahi",
+)
+
+
+def is_demo_diagnosis(diagnosis: str) -> bool:
+    text = diagnosis.lower()
+    return any(keyword in text for keyword in DEMO_DIAGNOSIS_KEYWORDS)
+
+
 def format_records(records: Optional[PatientRecords]) -> str:
     if not records_provided(records):
         return "No patient records summary provided."
