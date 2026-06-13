@@ -1,0 +1,41 @@
+:root {
+  /* Colors — warm clinical ledger */
+  --bg: #f3f0e8;
+  --surface: #fefcf8;
+  --surface-muted: #ebe6dc;
+  --surface-elevated: #f8f5ef;
+  --border: #d4cfc4;
+  --text: #1a2420;
+  --text-muted: #5c6a64;
+  --accent: #1a6b5c;
+  --accent-hover: #145549;
+  --accent-subtle: rgba(26, 107, 92, 0.1);
+  --aligned: #2a7d52;
+  --aligned-bg: #e8f3ec;
+  --aligned-border: rgba(42, 125, 82, 0.35);
+  --flagged: #9a5b14;
+  --flagged-bg: #f9eed9;
+  --flagged-border: rgba(154, 91, 20, 0.4);
+  --error: #b53d3d;
+  --error-bg: rgba(181, 61, 61, 0.1);
+  --error-border: rgba(181, 61, 61, 0.35);
+
+  /* Typography */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Spacing rhythm (8px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
