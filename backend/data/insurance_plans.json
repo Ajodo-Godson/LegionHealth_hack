@@ -1,0 +1,37 @@
+{
+  "patient": {
+    "name": "Demo Patient",
+    "member_id": "SYN-88421",
+    "plan_name": "BlueCross Silver PPO",
+    "deductible_remaining": 850,
+    "out_of_pocket_max_remaining": 3200,
+    "coinsurance_percent": 20
+  },
+  "coverage": {
+    "sleep_study": {
+      "covered": true,
+      "prior_auth_required": true,
+      "in_network_copay": 40,
+      "out_of_network_coinsurance": 40
+    },
+    "cpap": {
+      "covered": true,
+      "prior_auth_required": true,
+      "in_network_coinsurance": 20,
+      "dme_supplier_required": true,
+      "typical_patient_cost_after_insurance": "150-400"
+    },
+    "uppp_surgery": {
+      "covered": true,
+      "prior_auth_required": true,
+      "in_network_coinsurance": 20,
+      "typical_patient_cost_after_insurance": "2500-6000",
+      "medical_necessity_review_required": true
+    }
+  },
+  "in_network_providers": [
+    "Northside Sleep Center",
+    "Metro Pulmonary & Sleep",
+    "Lakeside Sleep Medicine"
+  ]
+}
