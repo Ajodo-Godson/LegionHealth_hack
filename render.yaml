@@ -1,0 +1,29 @@
+# Deploy backend at https://render.com (free tier works for hackathon demos).
+# Vercel hosts the frontend; Render hosts FastAPI (SSE + long runs need a real server).
+
+services:
+  - type: web
+    name: legionhealth-apo-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: XAI_API_KEY
+        sync: false
+      - key: XAI_TEXT_MODEL
+        value: grok-3
+      - key: AGENTPHONE_API_KEY
+        sync: false
+      - key: AGENTPHONE_AGENT_ID
+        sync: false
+      - key: AGENTPHONE_FROM_NUMBER_ID
+        sync: false
+      - key: AGENTPHONE_TO_NUMBER
+        sync: false
+      - key: ALLOWED_ORIGIN_REGEX
+        value: "https://.*\\.vercel\\.app"
