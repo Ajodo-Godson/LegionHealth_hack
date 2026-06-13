@@ -1,0 +1,43 @@
+{
+  "clinics": [
+    {
+      "id": "clinic-001",
+      "name": "Northside Sleep Center",
+      "address": "1200 Medical Park Dr, Suite 300, Atlanta, GA 30308",
+      "phone": "(404) 555-0182",
+      "in_network": true,
+      "specialties": ["sleep medicine", "pulmonology"],
+      "wait_time_days": 10,
+      "cpap_setup_available": true,
+      "accepts_prior_auth": true,
+      "rating": 4.6,
+      "notes": "Same-week telehealth intake available; CPAP setup within 2 weeks of diagnosis"
+    },
+    {
+      "id": "clinic-002",
+      "name": "Metro Pulmonary & Sleep",
+      "address": "450 Peachtree St NE, Atlanta, GA 30308",
+      "phone": "(404) 555-0291",
+      "in_network": true,
+      "specialties": ["sleep medicine", "ENT"],
+      "wait_time_days": 21,
+      "cpap_setup_available": true,
+      "accepts_prior_auth": true,
+      "rating": 4.4,
+      "notes": "Offers surgical options including UPPP; longer wait for new patients"
+    },
+    {
+      "id": "clinic-003",
+      "name": "Lakeside Sleep Medicine",
+      "address": "88 Lakeview Blvd, Decatur, GA 30030",
+      "phone": "(404) 555-0377",
+      "in_network": true,
+      "specialties": ["sleep medicine"],
+      "wait_time_days": 7,
+      "cpap_setup_available": true,
+      "accepts_prior_auth": true,
+      "rating": 4.8,
+      "notes": "Fastest appointment availability; strong CPAP adherence program"
+    }
+  ]
+}
