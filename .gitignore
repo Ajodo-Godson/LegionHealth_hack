@@ -1,0 +1,20 @@
+# Environment and secrets
+.env
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
