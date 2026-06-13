@@ -1,0 +1,40 @@
+{
+  "diagnosis": "sleep apnea",
+  "treatments": [
+    {
+      "name": "CPAP therapy",
+      "type": "first-line",
+      "evidence_level": "strong",
+      "effectiveness": "Reduces apnea events by 80-90% in compliant patients",
+      "typical_timeline": "Device setup within 1-2 weeks after diagnosis",
+      "cost_tier": "low",
+      "surgery": false,
+      "summary": "Continuous positive airway pressure is the gold-standard first-line treatment for moderate-to-severe OSA. Most insurers require prior auth and a DME supplier."
+    },
+    {
+      "name": "Oral appliance (mandibular advancement device)",
+      "type": "alternative",
+      "evidence_level": "moderate",
+      "effectiveness": "Effective for mild-to-moderate OSA; 50-60% reduction in events",
+      "typical_timeline": "Custom fitting within 2-4 weeks",
+      "cost_tier": "medium",
+      "surgery": false,
+      "summary": "Good option for patients who cannot tolerate CPAP. Requires dental specialist fitting."
+    },
+    {
+      "name": "UPPP surgery (uvulopalatopharyngoplasty)",
+      "type": "surgical",
+      "evidence_level": "moderate",
+      "effectiveness": "50-60% success rate; often combined with other procedures",
+      "typical_timeline": "Surgery scheduling within 4-8 weeks after consult",
+      "cost_tier": "high",
+      "surgery": true,
+      "summary": "Surgical option for patients who fail CPAP. Higher cost, recovery time, and medical necessity review. Not first-line unless CPAP intolerable."
+    }
+  ],
+  "clinical_guidelines": [
+    "AASM recommends CPAP as first-line for moderate-to-severe OSA",
+    "Surgery reserved for CPAP failure or specific anatomical indications",
+    "Prior authorization typically required for sleep studies and DME"
+  ]
+}
